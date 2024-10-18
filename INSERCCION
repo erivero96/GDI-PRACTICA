@@ -1,0 +1,345 @@
+INSERT INTO funcionario (dniFuncionario, nombre, apellidos, correo) VALUES
+('12345678A', 'Juan', 'Pérez', 'juan.perez@example.com'),
+('87654321B', 'María', 'González', 'maria.gonzalez@example.com'),
+('11112222C', 'Pedro', 'Jiménez', 'pedro.jimenez@example.com'),
+('33334444D', 'Ana', 'Soto', 'ana.soto@example.com'),
+('55556666E', 'Laura', 'Torres', 'laura.torres@example.com'),
+('77778888F', 'Carlos', 'López', 'carlos.lopez@example.com'),
+('99990000G', 'Sofía', 'Martínez', 'sofia.martinez@example.com'),
+('11113333H', 'Miguel', 'Rodríguez', 'miguel.rodriguez@example.com'),
+('22224444I', 'Elena', 'Paredes', 'elena.paredes@example.com'),
+('44445555J', 'David', 'Núñez', 'david.nunez@example.com'),
+('55556666K', 'Julia', 'Fernández', 'julia.fernandez@example.com'),
+('66667777L', 'Adriana', 'Morales', 'adriana.morales@example.com'),
+('88889999M', 'Javier', 'Flores', 'javier.flores@example.com'),
+('00001111N', 'Patricia', 'Díaz', 'patricia.diaz@example.com'),
+('11112222O', 'Ricardo', 'Chávez', 'ricardo.chavez@example.com'),
+('22223333P', 'Paola', 'Guzmán', 'paola.guzman@example.com'),
+('33334444Q', 'Fernando', 'Castro', 'fernando.castro@example.com'),
+('44445555R', 'Lucía', 'García', 'lucia.garcia@example.com'),
+('55556666S', 'Valeria', 'Mendoza', 'valeria.mendoza@example.com'),
+('66667777T', 'Alejandro', 'Vega', 'alejandro.vega@example.com');
+
+
+INSERT INTO telefono (dniFuncionario, telefono) VALUES
+('12345678A', '555-1234'), ('12345678A', '555-5678'),
+('87654321B', '555-9876'), ('11112222C', '555-4321'),
+('33334444D', '555-8765'), ('55556666E', '555-6543'),
+('77778888F', '555-0987'), ('99990000G', '555-2222'),
+('11113333H', '555-3333'), ('22224444I', '555-4444'),
+('44445555J', '555-5555'), ('55556666K', '555-6666'),
+('66667777L', '555-7777'), ('88889999M', '555-8888'),
+('00001111N', '555-9999'), ('11112222O', '555-0000'),
+('22223333P', '555-1111'), ('33334444Q', '555-1212'),
+('44445555R', '555-2323'), ('55556666S', '555-3434');
+
+
+INSERT INTO supervisor (dniSupervisor, numAlmacen) VALUES
+('12345678A', 1), ('87654321B', 2), ('11112222C', 3),
+('33334444D', 4), ('55556666E', 5), ('77778888F', 6),
+('99990000G', 7), ('11113333H', 8), ('22224444I', 9),
+('44445555J', 10), ('55556666K', 11), ('66667777L', 12),
+('88889999M', 13), ('00001111N', 14), ('11112222O', 15),
+('22223333P', 16), ('33334444Q', 17), ('44445555R', 18),
+('55556666S', 19), ('66667777T', 20);
+
+
+INSERT INTO administrador (dniAdministrador, area) VALUES
+('87654321B', 'Recursos Humanos'),
+('33334444D', 'Finanzas'),
+('55556666E', 'Logística'),
+('99990000G', 'IT'),
+('44445555J', 'Marketing'),
+('66667777L', 'Operaciones'),
+('88889999M', 'Calidad'),
+('00001111N', 'Legal'),
+('11113333H', 'Comunicaciones'),
+('11112222O', 'Ventas'),
+('33334444Q', 'Ingeniería'),
+('55556666S', 'Compras'),
+('66667777T', 'Atención al Cliente'),
+('22223333P', 'Producción'),
+('11112222C', 'Innovación'),
+('77778888F', 'Distribución'),
+('22224444I', 'Infraestructura'),
+('44445555R', 'Contabilidad'),
+('55556666K', 'Auditoría'),
+('99999999T', 'Seguridad y Salud');
+
+
+
+INSERT INTO jefe_operaciones (dniJefeOp, operacion) VALUES
+('11112222C', 'Mantenimiento'), ('22224444I', 'Producción'),
+('33334444D', 'Almacenamiento'), ('55556666E', 'Logística'),
+('66667777T', 'Transporte'), ('44445555J', 'Instalación'),
+('88889999M', 'Calidad'), ('77778888F', 'Control de procesos'),
+('55556666S', 'Supervisión'), ('22223333P', 'Operaciones generales'),
+('99990000G', 'TIC'), ('44445555R', 'Cierre de proyectos'),
+('11113333H', 'Ingeniería de procesos'), ('11112222O', 'Integración'),
+('00001111N', 'Seguridad y Salud'), ('11112222C', 'Auditoría interna'),
+('55556666K', 'Planificación'), ('66667777L', 'Inventario'),
+('33334444Q', 'Ventas técnicas'), ('22223333P', 'Soporte técnico');
+
+
+INSERT INTO trabajador (dniTrabajador, dniSupervisor, nombre, apellidos, cargo, telefono) VALUES
+('22222222D', '12345678A', 'Carlos', 'Ramírez', 'Operador', '555-1111'),
+('33333333E', '12345678A', 'Ana', 'Torres', 'Operaria', '555-2222'),
+('44444444F', '11112222C', 'Diego', 'Martínez', 'Supervisor', '555-3333'),
+('55555555G', '87654321B', 'Laura', 'López', 'Ingeniera', '555-4444'),
+('66666666H', '33334444D', 'Pedro', 'Jiménez', 'Almacenista', '555-5555'),
+('77777777I', '55556666E', 'Patricia', 'Díaz', 'Chofer', '555-6666'),
+('88888888J', '77778888F', 'Javier', 'Mora', 'Operador', '555-7777'),
+('99999999K', '99990000G', 'Adriana', 'García', 'Analista', '555-8888'),
+('11111111L', '44445555J', 'Lucía', 'Paredes', 'Asistente', '555-9999'),
+('22222222M', '66667777L', 'Fernando', 'Castro', 'Ingeniero', '555-0000'),
+('33333333N', '88889999M', 'Mónica', 'Fernández', 'Supervisora', '555-1212'),
+('44444444O', '00001111N', 'Alejandro', 'Morales', 'Jefe', '555-2323'),
+('55555555P', '11113333H', 'Ricardo', 'Chávez', 'Auxiliar', '555-3434'),
+('66666666Q', '11112222O', 'Daniela', 'Guzmán', 'Asistente', '555-4545'),
+('77777777R', '22223333P', 'Rodrigo', 'Castillo', 'Técnico', '555-5656'),
+('88888888S', '33334444Q', 'Esteban', 'Vega', 'Supervisor', '555-6767'),
+('99999999T', '44445555R', 'Lucía', 'Mendoza', 'Coordinadora', '555-7878'),
+('11111111U', '55556666K', 'Manuel', 'Vargas', 'Ingeniero', '555-8989'),
+('22222222V', '66667777L', 'Sara', 'Vega', 'Operadora', '555-9090'),
+('33333333W', '11112222C', 'Francisco', 'Paredes', 'Supervisor', '555-1010');
+
+
+
+INSERT INTO justificacion (dniAdministrador, dniTrabajador, fecha, motivo) VALUES
+('87654321B', '22222222D', '2024-10-01', 'Licencia médica por enfermedad respiratoria'),
+('87654321B', '33333333E', '2024-10-05', 'Permiso por asuntos familiares'),
+('33334444D', '44444444F', '2024-10-07', 'Incapacidad temporal por accidente de trabajo'),
+('55556666E', '55555555G', '2024-10-10', 'Licencia por maternidad'),
+('99990000G', '66666666H', '2024-10-15', 'Permiso por estudios superiores'),
+('44445555J', '77777777I', '2024-10-17', 'Asistencia a curso de capacitación'),
+('66667777L', '88888888J', '2024-10-18', 'Problemas personales'),
+('88889999M', '99999999K', '2024-10-19', 'Enfermedad familiar grave'),
+('00001111N', '11111111L', '2024-10-20', 'Cambio de residencia'),
+('11113333H', '22222222M', '2024-10-22', 'Asistencia a evento institucional'),
+('11112222O', '33333333N', '2024-10-25', 'Accidente automovilístico'),
+('22223333P', '44444444O', '2024-10-28', 'Vacaciones pendientes'),
+('33334444Q', '55555555P', '2024-10-30', 'Atención médica programada'),
+('55556666S', '66666666Q', '2024-11-01', 'Compromiso familiar ineludible'),
+('66667777T', '77777777R', '2024-11-02', 'Participación en evento deportivo'),
+('22223333P', '88888888S', '2024-11-04', 'Servicio comunitario'),
+('44445555R', '99999999T', '2024-11-06', 'Mantenimiento de salud mental'),
+('11112222C', '11111111U', '2024-11-07', 'Permiso por adopción'),
+('77778888F', '22222222V', '2024-11-08', 'Visita médica urgente'),
+('22224444I', '33333333W', '2024-11-10', 'Compromiso religioso');
+
+
+
+
+INSERT INTO solicitud (dniSupervisor, motivo, fecha, cantTrabajadores) VALUES
+('12345678A', 'Aumento de producción por alta demanda', '2024-10-10', 5),
+('87654321B', 'Reemplazo temporal por licencia médica', '2024-10-12', 2),
+('11112222C', 'Asignación de personal para proyecto especial', '2024-10-14', 3),
+('33334444D', 'Refuerzo en turno nocturno', '2024-10-15', 4),
+('55556666E', 'Apoyo logístico en inventario', '2024-10-17', 3),
+('77778888F', 'Cobertura por bajas en equipo de campo', '2024-10-20', 6),
+('99990000G', 'Apoyo técnico en instalación de equipos', '2024-10-22', 3),
+('11113333H', 'Asignación para tareas de mantenimiento', '2024-10-25', 5),
+('22224444I', 'Reemplazo en turno de supervisor', '2024-10-27', 1),
+('44445555J', 'Cobertura en feria institucional', '2024-10-30', 2),
+('55556666K', 'Soporte para jornada extraordinaria', '2024-11-02', 4),
+('66667777L', 'Aumento de personal para área de almacén', '2024-11-03', 3),
+('88889999M', 'Refuerzo en campaña de ventas', '2024-11-05', 7),
+('00001111N', 'Apoyo en logística de distribución', '2024-11-07', 2),
+('11112222O', 'Asignación para inspección de seguridad', '2024-11-09', 2),
+('22223333P', 'Sustitución por rotación de personal', '2024-11-10', 3),
+('33334444Q', 'Cobertura por vacaciones', '2024-11-12', 1),
+('44445555R', 'Apoyo en área de producción', '2024-11-14', 4),
+('55556666S', 'Refuerzo por alta carga operativa', '2024-11-15', 6),
+('66667777T', 'Asignación para cierre de proyecto', '2024-11-17', 2);
+
+
+
+INSERT INTO reporte_diario (
+    dniAdministrador, dniSupervisor, contratista, turno, horaLaboral, 
+    clima, actividades, revisadoPorSe, revisadoPorSuperVC, 
+    comentariosSupervisor, fecha
+) VALUES
+('87654321B', '12345678A', 'Constructora XYZ', 'Mañana', '08:00:00', 'Soleado', 'Mantenimiento general', TRUE, FALSE, 'Todo en orden', '2024-10-01'),
+('33334444D', '11112222C', 'Obras del Sur', 'Tarde', '14:00:00', 'Nublado', 'Reparación de maquinaria', TRUE, TRUE, 'Cumplido según lo planeado', '2024-10-02'),
+('55556666E', '33334444D', 'Infraestructura Lima', 'Noche', '22:00:00', 'Lluvioso', 'Supervisión de personal', FALSE, FALSE, 'Pendiente de revisión', '2024-10-03'),
+('99990000G', '55556666E', 'TecnoLogistics', 'Mañana', '08:00:00', 'Despejado', 'Instalación de software', TRUE, TRUE, 'Revisión completa', '2024-10-04'),
+('44445555J', '77778888F', 'Equipos del Norte', 'Tarde', '13:00:00', 'Ventoso', 'Montaje de estructuras', TRUE, FALSE, 'Ajustes en proceso', '2024-10-05'),
+('66667777L', '99990000G', 'Seguridad Total', 'Noche', '20:00:00', 'Lluvia ligera', 'Control de acceso', FALSE, TRUE, 'Revisión aprobada', '2024-10-06'),
+('88889999M', '11113333H', 'Distribuciones SAC', 'Mañana', '08:00:00', 'Soleado', 'Almacenamiento de productos', TRUE, TRUE, 'Sin novedades', '2024-10-07'),
+('00001111N', '22224444I', 'Logística Perú', 'Tarde', '12:00:00', 'Nublado', 'Recepción de materiales', TRUE, FALSE, 'A tiempo', '2024-10-08'),
+('11113333H', '44445555J', 'Energy Systems', 'Noche', '21:00:00', 'Frío', 'Mantenimiento de planta', FALSE, TRUE, 'Pendiente de firma', '2024-10-09'),
+('22223333P', '66667777L', 'Fuerza Técnica', 'Mañana', '08:00:00', 'Despejado', 'Inspección de seguridad', TRUE, TRUE, 'Todo en regla', '2024-10-10'),
+('33334444Q', '88889999M', 'Proyectos Integrales', 'Tarde', '14:00:00', 'Soleado', 'Coordinación con contratistas', TRUE, FALSE, 'Sin contratiempos', '2024-10-11'),
+('55556666S', '00001111N', 'Servicios Globales', 'Noche', '22:00:00', 'Lluvia moderada', 'Supervisión de turno', FALSE, FALSE, 'Pendiente revisión final', '2024-10-12'),
+('66667777T', '11112222O', 'Logística Andina', 'Mañana', '07:00:00', 'Frío', 'Distribución de productos', TRUE, TRUE, 'Todo conforme', '2024-10-13'),
+('11112222C', '22223333P', 'Proyecto Minero', 'Tarde', '15:00:00', 'Soleado', 'Mantenimiento de equipos', TRUE, FALSE, 'Trabajo en progreso', '2024-10-14'),
+('77778888F', '33334444Q', 'Construcciones EIRL', 'Noche', '21:00:00', 'Ventoso', 'Montaje de maquinaria', FALSE, TRUE, 'Ajustes en ejecución', '2024-10-15'),
+('22224444I', '55556666S', 'Soluciones Integrales', 'Mañana', '08:00:00', 'Nublado', 'Supervisión general', TRUE, TRUE, 'Sin observaciones', '2024-10-16'),
+('44445555R', '66667777T', 'Distribución Express', 'Tarde', '12:30:00', 'Soleado', 'Entrega de productos', TRUE, FALSE, 'Todo en orden', '2024-10-17'),
+('55556666K', '88888888S', 'Servicios Técnicos', 'Noche', '20:00:00', 'Lluvia ligera', 'Revisión de sistemas', FALSE, TRUE, 'Trabajo satisfactorio', '2024-10-18'),
+('66667777L', '99999999T', 'Ingeniería Integral', 'Mañana', '08:00:00', 'Despejado', 'Evaluación de proyecto', TRUE, TRUE, 'Sin pendientes', '2024-10-19'),
+('11112222O', '11111111U', 'Seguridad Avanzada', 'Tarde', '14:30:00', 'Soleado', 'Supervisión de accesos', TRUE, TRUE, 'Aprobado', '2024-10-20');
+
+
+
+
+
+INSERT INTO detalle_reporte_diario (
+    idReporteDiario, dni, horaInicio, horaTermino, horasRegulares, horasLaboradas, horasExtra, motivo
+) VALUES
+(1, '22222222D', '08:00:00', '16:00:00', 8.00, 8.00, 0.00, 'Turno regular'),
+(1, '33333333E', '08:00:00', '18:00:00', 8.00, 10.00, 2.00, 'Turno extendido'),
+(2, '44444444F', '14:00:00', '22:00:00', 8.00, 8.00, 0.00, 'Turno de tarde'),
+(2, '55555555G', '14:00:00', '23:00:00', 8.00, 9.00, 1.00, 'Horas extra por solicitud'),
+(3, '66666666H', '22:00:00', '06:00:00', 8.00, 8.00, 0.00, 'Turno nocturno'),
+(3, '77777777I', '22:00:00', '07:00:00', 8.00, 9.00, 1.00, 'Turno nocturno extendido'),
+(4, '88888888J', '08:00:00', '16:00:00', 8.00, 8.00, 0.00, 'Mantenimiento de rutina'),
+(4, '99999999K', '08:00:00', '17:00:00', 8.00, 9.00, 1.00, 'Trabajo urgente'),
+(5, '11111111L', '13:00:00', '21:00:00', 8.00, 8.00, 0.00, 'Supervisión'),
+(5, '22222222M', '13:00:00', '22:00:00', 8.00, 9.00, 1.00, 'Turno extendido'),
+(6, '33333333N', '21:00:00', '05:00:00', 8.00, 8.00, 0.00, 'Control nocturno'),
+(6, '44444444O', '21:00:00', '06:00:00', 8.00, 9.00, 1.00, 'Turno extra'),
+(7, '55555555P', '08:00:00', '12:00:00', 4.00, 4.00, 0.00, 'Turno corto'),
+(7, '66666666Q', '08:00:00', '14:00:00', 4.00, 6.00, 2.00, 'Turno corto extendido'),
+(8, '77777777R', '12:00:00', '20:00:00', 8.00, 8.00, 0.00, 'Revisión de instalaciones'),
+(8, '88888888S', '12:00:00', '21:00:00', 8.00, 9.00, 1.00, 'Trabajo adicional'),
+(9, '99999999T', '20:00:00', '04:00:00', 8.00, 8.00, 0.00, 'Turno completo'),
+(9, '11111111U', '20:00:00', '05:00:00', 8.00, 9.00, 1.00, 'Turno con horas extra'),
+(10, '22222222V', '14:00:00', '22:00:00', 8.00, 8.00, 0.00, 'Supervisión general'),
+(10, '33333333W', '14:00:00', '23:00:00', 8.00, 9.00, 1.00, 'Turno con apoyo adicional');
+
+
+
+
+
+
+INSERT INTO formato_horas_extra (dniAdministrador, dniJefeOp) VALUES
+('87654321B', '11112222C'),
+('33334444D', '22224444I'),
+('55556666E', '33334444D'),
+('99990000G', '55556666E'),
+('44445555J', '66667777T'),
+('66667777L', '44445555J'),
+('88889999M', '88889999M'),
+('00001111N', '77778888F'),
+('11113333H', '55556666S'),
+('11112222O', '99990000G'),
+('33334444Q', '44445555R'),
+('55556666S', '22223333P'),
+('66667777T', '11112222C'),
+('22223333P', '55556666K'),
+('11112222C', '11112222O'),
+('77778888F', '33334444Q'),
+('22224444I', '00001111N'),
+('44445555R', '22223333P'),
+('11113333H', '66667777L'),
+('55556666E', '99999999T');
+
+
+
+
+
+
+INSERT INTO detalle_formato_horas_extra (idFormatoHorasExtra, dni, fecha, totalHorasExtra) VALUES
+(1, '22222222D', '2024-10-01', 2.00),
+(1, '33333333E', '2024-10-02', 3.50),
+(2, '44444444F', '2024-10-03', 1.50),
+(2, '55555555G', '2024-10-04', 2.75),
+(3, '66666666H', '2024-10-05', 4.00),
+(3, '77777777I', '2024-10-06', 1.25),
+(4, '88888888J', '2024-10-07', 2.00),
+(4, '99999999K', '2024-10-08', 3.00),
+(5, '11111111L', '2024-10-09', 1.50),
+(5, '22222222M', '2024-10-10', 4.00),
+(6, '33333333N', '2024-10-11', 3.25),
+(6, '44444444O', '2024-10-12', 2.50),
+(7, '55555555P', '2024-10-13', 1.75),
+(7, '66666666Q', '2024-10-14', 3.00),
+(8, '77777777R', '2024-10-15', 2.25),
+(8, '88888888S', '2024-10-16', 4.50),
+(9, '99999999T', '2024-10-17', 2.00),
+(9, '11111111U', '2024-10-18', 3.00),
+(10, '22222222V', '2024-10-19', 1.50),
+(10, '33333333W', '2024-10-20', 2.75);
+
+
+
+
+
+
+INSERT INTO horas_extras_al_25 (fecha, horasAl25) VALUES
+('2024-10-01', 2.00),
+('2024-10-02', 1.50),
+('2024-10-03', 3.00),
+('2024-10-04', 2.75),
+('2024-10-05', 1.25),
+('2024-10-06', 2.50),
+('2024-10-07', 3.50),
+('2024-10-08', 1.75),
+('2024-10-09', 2.25),
+('2024-10-10', 1.00),
+('2024-10-11', 3.00),
+('2024-10-12', 2.00),
+('2024-10-13', 2.50),
+('2024-10-14', 1.50),
+('2024-10-15', 2.75),
+('2024-10-16', 1.25),
+('2024-10-17', 3.00),
+('2024-10-18', 2.50),
+('2024-10-19', 1.75),
+('2024-10-20', 2.00);
+
+
+
+
+
+
+
+INSERT INTO horas_extras_al_35 (fecha, horasAl35) VALUES
+('2024-10-01', 1.50),
+('2024-10-02', 2.00),
+('2024-10-03', 1.25),
+('2024-10-04', 2.75),
+('2024-10-05', 3.00),
+('2024-10-06', 1.50),
+('2024-10-07', 2.50),
+('2024-10-08', 1.75),
+('2024-10-09', 3.25),
+('2024-10-10', 2.00),
+('2024-10-11', 1.00),
+('2024-10-12', 2.75),
+('2024-10-13', 1.50),
+('2024-10-14', 2.25),
+('2024-10-15', 1.75),
+('2024-10-16', 2.50),
+('2024-10-17', 3.00),
+('2024-10-18', 1.50),
+('2024-10-19', 2.25),
+('2024-10-20', 3.00);
+
+
+
+
+
+INSERT INTO horas_extras_al_100 (fecha, horasAl100) VALUES
+('2024-10-01', 2.00),
+('2024-10-02', 2.50),
+('2024-10-03', 3.00),
+('2024-10-04', 1.50),
+('2024-10-05', 2.75),
+('2024-10-06', 3.25),
+('2024-10-07', 1.00),
+('2024-10-08', 2.50),
+('2024-10-09', 3.00),
+('2024-10-10', 1.75),
+('2024-10-11', 2.25),
+('2024-10-12', 1.50),
+('2024-10-13', 2.75),
+('2024-10-14', 1.25),
+('2024-10-15', 2.00),
+('2024-10-16', 3.50),
+('2024-10-17', 2.25),
+('2024-10-18', 3.00),
+('2024-10-19', 2.00),
+('2024-10-20', 1.75);
+
