@@ -1,0 +1,60 @@
+INSERT INTO supervisor (dniSupervisor, numAlmacen) VALUES
+('12345678A', 1), ('87654321B', 2), ('11112222C', 3), 
+('33334444D', 4), ('55556666E', 5), ('77778888F', 6), 
+('99990000G', 7), ('11113333H', 8), ('22224444I', 9), 
+('44445555J', 10), ('55556666K', 11), ('66667777L', 12), 
+('88889999M', 13), ('00001111N', 14), ('11112222O', 15), 
+('22223333P', 16), ('33334444Q', 17), ('44445555R', 18), 
+('55556666S', 19), ('66667777T', 20);
+
+INSERT INTO jefe_operaciones (dniJefeOp, operacion) VALUES
+('11112222C', 'Mantenimiento'), ('22224444I', 'Producción'), 
+('33334444D', 'Almacenamiento'), ('55556666E', 'Logística'), 
+('66667777T', 'Transporte'), ('44445555J', 'Instalación'), 
+('88889999M', 'Control de Calidad'), ('77778888F', 'Control de Procesos'), 
+('55556666S', 'Supervisión'), ('22223333P', 'Operaciones Generales'), 
+('99990000G', 'TIC'), ('44445555R', 'Cierre de Proyectos'), 
+('11113333H', 'Ingeniería de Procesos'), ('11112222O', 'Integración'), 
+('00001111N', 'Seguridad y Salud'), ('55556666K', 'Planificación'), 
+('66667777L', 'Inventario'), ('33334444Q', 'Ventas Técnicas'), 
+('44445555R', 'Soporte Técnico'), ('99999999T', 'Auditoría Interna');
+
+
+INSERT INTO formato_horas_extra (dniAdministrador, dniJefeOp) VALUES
+('87654321B', '11112222C'), ('33334444D', '22224444I'), 
+('55556666E', '33334444D'), ('99990000G', '55556666E'), 
+('44445555J', '66667777T'), ('66667777L', '44445555J'), 
+('88889999M', '88889999M'), ('00001111N', '77778888F'), 
+('11113333H', '55556666S'), ('11112222O', '99990000G'), 
+('33334444Q', '44445555R'), ('55556666S', '22223333P'), 
+('66667777T', '11112222C'), ('22223333P', '55556666K'), 
+('11112222C', '11112222O'), ('77778888F', '33334444Q'), 
+('22224444I', '00001111N'), ('44445555R', '22223333P'), 
+('11113333H', '66667777L'), ('55556666E', '99999999T');
+
+
+INSERT INTO reporte_diario (
+    dniAdministrador, dniSupervisor, contratista, turno, horaLaboral, 
+    clima, actividades, revisadoPorSe, revisadoPorSuperVC, 
+    comentariosSupervisor, fecha
+) VALUES
+('87654321B', '12345678A', 'Constructora XYZ', 'Mañana', '08:00:00', 'Soleado', 'Mantenimiento general', TRUE, FALSE, 'Todo en orden', '2024-10-01'),
+('33334444D', '11112222C', 'Obras del Sur', 'Tarde', '14:00:00', 'Nublado', 'Reparación de maquinaria', TRUE, TRUE, 'Cumplido según lo planeado', '2024-10-02'),
+('55556666E', '33334444D', 'Infraestructura Lima', 'Noche', '22:00:00', 'Lluvioso', 'Supervisión de personal', FALSE, FALSE, 'Pendiente de revisión', '2024-10-03'),
+('99990000G', '55556666E', 'TecnoLogistics', 'Mañana', '08:00:00', 'Despejado', 'Instalación de software', TRUE, TRUE, 'Revisión completa', '2024-10-04'),
+('44445555J', '77778888F', 'Equipos del Norte', 'Tarde', '13:00:00', 'Ventoso', 'Montaje de estructuras', TRUE, FALSE, 'Ajustes en proceso', '2024-10-05'),
+('66667777L', '99990000G', 'Seguridad Total', 'Noche', '20:00:00', 'Lluvia ligera', 'Control de acceso', FALSE, TRUE, 'Revisión aprobada', '2024-10-06'),
+('88889999M', '11113333H', 'Distribuciones SAC', 'Mañana', '08:00:00', 'Soleado', 'Almacenamiento de productos', TRUE, TRUE, 'Sin novedades', '2024-10-07'),
+('00001111N', '22224444I', 'Logística Perú', 'Tarde', '12:00:00', 'Nublado', 'Recepción de materiales', TRUE, FALSE, 'A tiempo', '2024-10-08'),
+('11113333H', '44445555J', 'Energy Systems', 'Noche', '21:00:00', 'Frío', 'Mantenimiento de planta', FALSE, TRUE, 'Pendiente de firma', '2024-10-09'),
+('22223333P', '66667777L', 'Fuerza Técnica', 'Mañana', '08:00:00', 'Despejado', 'Inspección de seguridad', TRUE, TRUE, 'Todo en regla', '2024-10-10'),
+('33334444Q', '88889999M', 'Proyectos Integrales', 'Tarde', '14:00:00', 'Soleado', 'Coordinación con contratistas', TRUE, FALSE, 'Sin contratiempos', '2024-10-11'),
+('55556666S', '00001111N', 'Servicios Globales', 'Noche', '22:00:00', 'Lluvia moderada', 'Supervisión de turno', FALSE, FALSE, 'Pendiente revisión final', '2024-10-12'),
+('66667777T', '11112222O', 'Logística Andina', 'Mañana', '07:00:00', 'Frío', 'Distribución de productos', TRUE, TRUE, 'Todo conforme', '2024-10-13'),
+('11112222C', '22223333P', 'Proyecto Minero', 'Tarde', '15:00:00', 'Soleado', 'Mantenimiento de equipos', TRUE, FALSE, 'Trabajo en progreso', '2024-10-14'),
+('77778888F', '33334444Q', 'Construcciones EIRL', 'Noche', '21:00:00', 'Ventoso', 'Montaje de maquinaria', FALSE, TRUE, 'Ajustes en ejecución', '2024-10-15'),
+('22224444I', '55556666S', 'Soluciones Integrales', 'Mañana', '08:00:00', 'Nublado', 'Supervisión general', TRUE, TRUE, 'Sin observaciones', '2024-10-16'),
+('44445555R', '66667777T', 'Distribución Express', 'Tarde', '12:30:00', 'Soleado', 'Entrega de productos', TRUE, FALSE, 'Todo en orden', '2024-10-17'),
+('55556666K', '88888888S', 'Servicios Técnicos', 'Noche', '20:00:00', 'Lluvia ligera', 'Revisión de sistemas', FALSE, TRUE, 'Trabajo satisfactorio', '2024-10-18'),
+('66667777L', '99999999T', 'Ingeniería Integral', 'Mañana', '08:00:00', 'Despejado', 'Evaluación de proyecto', TRUE, TRUE, 'Sin pendientes', '2024-10-19'),
+('11112222O', '11111111U', 'Seguridad Avanzada', 'Tarde', '14:30:00', 'Soleado', 'Supervisión de accesos', TRUE, TRUE, 'Aprobado', '2024-10-20');
