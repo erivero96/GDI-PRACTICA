@@ -1,4 +1,3 @@
-use gestion_trabajadores;
 INSERT INTO funcionario (dniFuncionario, nombre, apellidos, correo) VALUES
 ('45922445', 'frank robert', 'aldave marrreros', 'frank.aldave@enaex.com'),
 ('46381129', 'melser', 'fuentes nuñonca', 'melser.fuentes@enaex.com'),
@@ -10,7 +9,6 @@ INSERT INTO funcionario (dniFuncionario, nombre, apellidos, correo) VALUES
 ('70327447', 'manuel angel', 'huayas salvatiierra', 'manuel.huayas@enaex.com'),
 ('70766660', 'andrea milagros', 'cuno parari', 'andrea.cuno@enaex.com'),
 ('44395916', 'liz margot', 'gomez perez', 'liz.gomez@enaex.com');
-
 
 -- Registros para la tabla Supervisor
 INSERT INTO supervisor (dniSupervisor, numAlmacen) VALUES
@@ -244,11 +242,56 @@ INSERT INTO detallereportediario (
 (20, '72298904', '06:00:00', '22:00:00', 16.00, 12.00, 4.00, '03 voladuras en tajo Sur'),
 (20, '40485159', '06:00:00', '22:00:00', 16.00, 12.00, 4.00, '03 voladuras en tajo Sur');
 
+insert into equivalenteenhoras (dni, fecha, horasAl25, horasAl35, horasAl100) values
+-- Datos Junio
+('10815966', '2024-06-15',null, null, 12.00),
+('41468992', '2024-06-15',null, null, 15.00),
+('70514755', '2024-06-15',null, null, 14.00),
+('20722235', '2024-06-15',null, null, 6.00),
+('10207527', '2024-06-15',null, 3.00, null),
+('45911219', '2024-06-15',null, 3.00, null),
+('71347822', '2024-06-15',null, 3.00, null),
+('41302895', '2024-06-15',null, 3.00, null),
+('15742812', '2024-06-15', 2.00, null, null),
+('72117546', '2024-06-15',null, 5.00, null),
+('80248409', '2024-06-15', 2.00, null, null),
+('74027508', '2024-06-15', 2.00, null, null),
+('41196780', '2024-06-15', 2.00, null, null),
+('70194113', '2024-06-15', 2.00, null, null),
+('46968201', '2024-06-15',null, 3.00, null),
+('44658546', '2024-06-15',null, 3.00, null),
+('72122673', '2024-06-15', 2.00, null, null),
+('45200520', '2024-06-15', 2.00, null, null),
+('62137161', '2024-06-15', 2.00, null, null),
+('71253657', '2024-06-15',null, null, 6.00),
+('21557381', '2024-06-15',null, null, 6.00),
+('42099652', '2024-06-15',null, null, 6.00),
+
+-- Datos julio
+('75567026', '2024-07-15',null, null, 8.00),
+('10207527', '2024-07-15',null, null, 18.00),
+('70514755', '2024-07-15',null, null, 18.00),
+('72298904', '2024-07-15',null, null, 24.00),
+('40485159', '2024-07-15',null, null, 14.00),
+('41157842', '2024-07-15',null, null, 6.00),
+('41196780', '2024-07-15', 2.00, null, null),
+('46199251', '2024-07-15', 2.00, null, null),
+('47380194', '2024-07-15',null, null, 6.00),
+('46021319', '2024-07-15',null, null, 12.00),
+('42762286', '2024-07-15',null, null, 6.00),
+('95199731', '2024-07-15',null, 4.00, null),
+('40124379', '2024-07-15',null, 4.00, null),
+('74025610', '2024-07-15',null, 4.00, null),
+('40239841', '2024-07-15',null, 4.00, null),
+('45305469', '2024-07-15',null, 4.00, null),
+('45700179', '2024-07-15',null, 4.00, null);
+
+
 INSERT INTO formatohorasextra (dniAdministrador, dniJefeOp) VALUES
 ('70766660', '42331849'),
 ('44395916', '70327447');
 
-INSERT INTO detalle_formato_horas_extra (idFormatoHorasExtra, dni, fecha, totalHorasExtra) VALUES
+INSERT INTO detalleformatohorasextra (idFormatoHorasExtra, dni, fecha, totalHorasExtra) VALUES
 -- Datos Junio
 (1, '10815966', '2024-06-15', 12.00),
 (1, '41468992', '2024-06-15', 15.00),
@@ -291,30 +334,3 @@ INSERT INTO detalle_formato_horas_extra (idFormatoHorasExtra, dni, fecha, totalH
 (2, '40239841', '2024-07-15', 4.00),
 (2, '45305469', '2024-07-15', 4.00),
 (2, '45700179', '2024-07-15', 4.00);
-
-INSERT INTO formatohorasextra (dniAdministrador, dniJefeOp) VALUES
-('70766660', '42331849'),
-('44395916', '70327447');
-
-insert into horasextraAl100 (fecha, dni, horasAl100) values
-('2024-06-15', '71253657', 6),
-('2024-06-15', '70514755', 6),
-('2024-06-15', '21557381', 6),
-('2024-06-15', '42099652', 6),
-
-('2024-07-15', '47380194', 6),
-('2024-07-15', '46021319', 6),
-('2024-07-15', '42762286', 6);
-
-
-INSERT INTO detalle_formato_horas_extra (idFormatoHorasExtra, dni, fecha, totalHorasExtra) VALUES
--- Datos Junio
-(1, '70514755', '2024-06-15', 14.00),
-(1, '71253657', '2024-06-15', 6.00),
-(1, '21557381', '2024-06-15', 6.00),
-(1, '42099652', '2024-06-15', 6.00),
-
--- Datos Julio
-(2, '47380194', '2024-07-15', 6.00),
-(2, '46021319', '2024-07-15', 12.00),
-(2, '42762286', '2024-07-15', 6.00);

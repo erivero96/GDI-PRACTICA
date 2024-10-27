@@ -1,28 +1,32 @@
+CREATE database RegistrosSobretiempo;
+
+use RegistrosSobretiempo;
+
 -- Crear la tabla FUNCIONARIO
 CREATE TABLE Funcionario (
     dniFuncionario CHAR(8) PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     apellidos VARCHAR(50) NOT NULL,
     correo VARCHAR(100) NOT NULL
-);
+)engine=InnoDB;
 
 -- Crear la tabla SUPERVISOR
 CREATE TABLE Supervisor (
     dniSupervisor CHAR(8) PRIMARY KEY,
     numAlmacen VARCHAR(3) NOT NULL
-);
+)engine=InnoDB;
 
 -- Crear la tabla ADMINISTRADOR
 CREATE TABLE Administrador (
     dniAdministrador CHAR(8) PRIMARY KEY,
     area VARCHAR(100) NOT NULL
-);
+)engine=InnoDB;
 
 -- Crear la tabla JEFE_OPERACIONES
 CREATE TABLE JefeOperaciones (
     dniJefeOp CHAR(8) PRIMARY KEY,
     operacion VARCHAR(100) NOT NULL
-);
+)engine=InnoDB;
 
 -- Crear la tabla TRABAJADOR
 CREATE TABLE Trabajador (
@@ -33,7 +37,7 @@ CREATE TABLE Trabajador (
     cargo VARCHAR(100) NOT NULL,
     telefono CHAR(9) NOT NULL,
     FOREIGN KEY (dniSupervisor) REFERENCES Supervisor(dniSupervisor)
-);
+)engine=InnoDB;
 
 -- Crear la tabla TELEFONO
 CREATE TABLE Telefono (
@@ -41,7 +45,7 @@ CREATE TABLE Telefono (
     dniFuncionario CHAR(8) NOT NULL,
     telefono CHAR(9) NOT NULL,
     FOREIGN KEY (dniFuncionario) REFERENCES Funcionario(dniFuncionario)
-);
+)engine=InnoDB;
 
 -- Crear la tabla JUSTIFICACION
 CREATE TABLE Justificacion (
@@ -52,7 +56,7 @@ CREATE TABLE Justificacion (
     motivo TEXT NOT NULL,
     FOREIGN KEY (dniAdministrador) REFERENCES Administrador(dniAdministrador),
     FOREIGN KEY (dniTrabajador) REFERENCES Trabajador(dniTrabajador)
-);
+)engine=InnoDB;
 
 -- Crear la tabla SOLICITUD
 CREATE TABLE Solicitud (
@@ -64,7 +68,7 @@ CREATE TABLE Solicitud (
     cantTrabajadores INT(2) NOT NULL,
     FOREIGN KEY (dniJefeOp) REFERENCES JefeOperaciones(dniJefeOp),
     FOREIGN KEY (dniSupervisor) REFERENCES Supervisor(dniSupervisor)
-);
+)engine=InnoDB;
 
 -- Crear la tabla EQUIVALENTE_EN_HORAS
 CREATE TABLE EquivalenteEnHoras (
@@ -74,7 +78,7 @@ CREATE TABLE EquivalenteEnHoras (
     horasAl35 DECIMAL(4,2),
     horasAl100 DECIMAL(4,2),
     PRIMARY KEY (dni, fecha)
-);
+)engine=InnoDB;
 
 -- Crear la tabla REPORTE_DIARIO
 CREATE TABLE ReporteDiario (
@@ -93,7 +97,7 @@ CREATE TABLE ReporteDiario (
     fecha DATE NOT NULL,
     FOREIGN KEY (dniAdministrador) REFERENCES Administrador(dniAdministrador),
     FOREIGN KEY (dniSupervisor) REFERENCES Supervisor(dniSupervisor)
-);
+)engine=InnoDB;
 
 -- Crear la tabla DETALLE_REPORTE_DIARIO
 CREATE TABLE DetalleReporteDiario (
@@ -107,7 +111,7 @@ CREATE TABLE DetalleReporteDiario (
     horasExtra DECIMAL(4,2) NOT NULL,
     motivo TEXT NOT NULL,
     FOREIGN KEY (idReporteDiario) REFERENCES ReporteDiario(idReporteDiario)
-);
+)engine=InnoDB;
 
 -- Crear la tabla FORMATO_HORAS_EXTRA
 CREATE TABLE FormatoHorasExtra (
@@ -116,7 +120,7 @@ CREATE TABLE FormatoHorasExtra (
     dniJefeOp CHAR(8) NOT NULL,
     FOREIGN KEY (dniAdministrador) REFERENCES Administrador(dniAdministrador),
     FOREIGN KEY (dniJefeOp) REFERENCES JefeOperaciones(dniJefeOp)
-);
+)engine=InnoDB;
 
 -- Crear la tabla DETALLE_FORMATO_HORAS_EXTRA
 CREATE TABLE DetalleFormatoHorasExtra (
@@ -127,4 +131,4 @@ CREATE TABLE DetalleFormatoHorasExtra (
     totalHorasExtra DECIMAL(4,2) NOT NULL,
     FOREIGN KEY (idFormatoHorasExtra) REFERENCES FormatoHorasExtra(idFormatoHorasExtras),
     foreign key (dni, fecha) references EquivalenteEnHoras (dni, fecha)
-);
+)engine=InnoDB;
