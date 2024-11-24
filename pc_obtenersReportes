@@ -1,0 +1,12 @@
+DELIMITER $$
+
+CREATE PROCEDURE ObtenerDetalleReporte (
+    IN p_idReporteDiario INT
+)
+BEGIN
+    SELECT *
+    FROM reportediario
+    WHERE idReporteDiario = p_idReporteDiario;
+END$$
+
+DELIMITER ;
