@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CONTROL DE ASISTENCIA JINIS 2024</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .form-group {
+            text-align: left;
+        }
+        .roles {
+            display: flex;
+            justify-content: center;
+        }
+        .roles label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <header>
+            <h1>SISTEMA REGISTRO DE SOBRETIEMPO</h1>
+        </header>
+
+        <h1>Inicio de Sesion</h1>
+
+        <div class="content">
+            <div class="row">
+                <form method="post" class="form-horizontal col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <label for="input1" class="col-sm-3 control-label">Usuario</label>
+                        <div class="col-sm-7">
+                            <input type="text" name="username" class="form-control" id="input1" placeholder="your username" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input2" class="col-sm-3 control-label">Contraseña</label>
+                        <div class="col-sm-7">
+                            <input type="password" name="password" class="form-control" id="input2" placeholder="your password" />
+                        </div>
+                    </div>
+
+                    <div class="form-group-roles">
+                        <label for="input3" class="col-sm-3 control-label">Rol</label>
+                        <div class="col-sm-7 roles">
+                            <label>
+                                <input type="radio" name="type" id="optionsRadios1" value="supervisor"> Supervisor
+                            </label>
+                            <label>
+                                <input type="radio" name="type" id="optionsRadios2" value="admin"> Administrador
+                            </label>
+                            <label>
+                                <input type="radio" name="type" id="optionsRadios3" value="trabajador"> Trabajador
+                            </label>
+                            <label>
+                                <input type="radio" name="type" id="optionsRadios4" value="jefe_operaciones"> Jefe de Operaciones
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-7">
+                            <input type="submit" class="btn btn-primary" value="Login" name="login" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br><br>
+    </center>
+</body>
+</html>
