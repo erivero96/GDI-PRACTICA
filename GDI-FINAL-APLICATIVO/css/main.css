@@ -1,0 +1,248 @@
+header {
+    font-size: 15px;
+    font-weight: bold; /* Cambié 'font-style: bold' a 'font-weight: bold' */
+    text-align: center;
+    position: relative; /* Para posicionar elementos dentro del header */
+    padding: 30px 0; /* Añade espacio arriba y abajo */
+}
+
+.header-logo {
+    position: absolute; /* Posiciona el logo */
+    top: 20px; /* Ajusta la posición vertical */
+    left: 20px; /* Ajusta la posición horizontal */
+}
+
+.header-logo .logo {
+    height: 60px; /* Ajusta el tamaño del logo */
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 80;
+    color: black;
+    margin: 0;
+    line-height: 1.2; /* Ajusta el espacio entre líneas */
+}
+
+.navbar {
+    margin-top: 10px; /* Ajusta el espacio entre el título y la barra */
+}
+
+
+body {
+
+    background-color: #dcd9f3; /* Color de fondo */
+    color: black; /* Mantén el texto negro para un buen contraste */
+    font-family: Arial, sans-serif; /* Fuente limpia y profesional */
+    margin: 0;
+    padding: 0;
+}
+
+table input {
+    background-color: white;
+}
+
+table td button {
+    background-color: #DD211C; /* Rojo del logo */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+table td button:hover {
+    background-color: #DD211C; /* Un tono más oscuro de rojo */
+}
+
+.navbar {
+    font-size: 20px;
+    overflow: hidden;
+    background-color: #35424A; /* Azul del logo */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Suaviza el cambio al pasar el mouse */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+}
+
+.navbar a:hover {
+    background-color: #BBC7CF; /* Cambia el color de fondo */
+    color: black; /* Cambia el color del texto */
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+    border-radius: 10px; /* Bordes más redondeados al pasar el mouse */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex: 30%;
+    background-color: white;
+    padding: 50px;
+}
+
+select {
+    font-size: 15px;
+}
+
+option {
+    font-size: 15px;
+}
+
+a:hover {
+    color: blue;
+}
+
+p {
+    font-size: 15px;
+}
+
+img {
+    height: 200px;
+    width: 300px;
+}
+
+.btn-comun {
+    background-color: #DD211C; /* Rojo del logo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Suaviza el cambio de tamaño y sombra */
+}
+
+.btn-comun:hover {
+    transform: scale(1.1); /* Aumenta el tamaño un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+    background-color: #d63e26; /* Rojo más oscuro */
+}
+
+.form-horizontal {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group label {
+    text-align: left;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+}
+
+.form-group input[type="radio"] {
+    margin-left: 10px;
+}
+
+.btn-primary {
+    background-color: #DD211C; /* Rojo del logo */
+    border-color: #DD211C;
+}
+
+.btn-primary:hover {
+    background-color: #d63e26; /* Tono más oscuro */
+    border-color: #d63e26;
+}
+
+.contenido-reporte {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenido-reporte .form-group {
+    margin-bottom: 15px;
+}
+
+.contenido-reporte .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contenido-reporte .form-group input,
+.contenido-reporte .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contenido-reporte .form-group textarea {
+    resize: vertical;
+}
+
+.contenido-reporte .btn-primary {
+    background-color: #DD211C; /* Rojo */
+    border-color: #DD211C;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contenido-reporte .btn-primary:hover {
+    background-color: #d63e26; /* Rojo más oscuro */
+    border-color: #d63e26;
+}
+
+h1 {
+    font-weight: 800; /* Hace el texto más grueso */
+    font-size: 2.5em; /* Opcional: Ajusta el tamaño */
+    text-align: center; /* Mantiene el texto centrado */
+    color: black; /* Asegura que sea visible */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.navbar {
+    font-size: 20px;
+    overflow: hidden;
+    background-color: #35424A; /* Azul del logo */
+    display: flex; /* Cambia el layout a flexbox */
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    padding: 0 20px; /* Añade espacio a los lados */
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:last-child {
+    margin-left: auto; /* Empuja el último enlace (Salir) hacia la derecha */
+}
+
+input[type="date"] {
+    border-radius: 10px; /* Hace que los bordes sean redondeados */
+    padding: 10px; /* Añade espacio interno para que se vea mejor */
+    border: 1px solid #ccc; /* Borde gris claro */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    outline: none; /* Elimina el contorno azul al enfocar */
+    transition: box-shadow 0.3s ease; /* Añade una transición suave al enfoque */
+}
+
+input[type="date"]:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Resalta con una sombra azul al enfocar */
+    border-color: #007bff; /* Cambia el color del borde al enfocar */
+}
